@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'Interop';
+  src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff2')
+      format('woff2'),
+    url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+* {
+  font-family: 'Interop';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#weather-container {
+  background: url(./images/sunny.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  width: 1440px;
+  height: 1024px;
+}
+
+#right-box {
+  width: 25%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 30%);
+  float: right;
+  border-radius: 20px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#search-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 90%;
+  margin-top: 29px;
+  padding: 20px;
+}
+
+#search-box input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px 0px 0px 0px;
+  background-color: rgba(0, 0, 0, 20%);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 80%);
+  padding: 20px;
+  font-size: 20px;
+  z-index: 1;
+}
+
+#search-box button {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 18px;
+  margin-right: 20px;
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#search-box input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+#weather-box {
+display: flex;
+flex-direction: column;
+width: 100%;
+padding: 10px;
+font-size: 24px;
+margin-bottom: 100px;
+font-weight: 600;
+}
+
+#weather-details {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 80%);
+  padding: 20px;
+}
+
+#weather-box ul {
+  list-style-type: none;
+  padding: 0 20px;
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#weather-box button {
+  position: relative;
+  left: 450px;
+  top: 50px;
+  width: 80px;
+  height: 40px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#left-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 20px;
+  margin: 30px;
+}
+
+#now-date {
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+#now-weather {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+#now-weather h3 {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+#now-weather h4 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.dark {
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.dark #search-box input {
+  color: white;
+}
+
+.dark #search-box input::placeholder {
+  color: white;
+}
+
+.dark #weather-details,
+.dark#weather-box ul li {
+  color: white !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+

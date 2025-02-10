@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App Project</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="weather-container">
+    <div class="overlay"></div>
+
+    <!-- # 오른쪽 검색 & 정보 페이지 -->
+    <div id="right-box">
+      <!-- ! 검색 박스 -->
+      <div id="search-box">
+        <input type="text" placeholder="Search" id="city-input" />
+        <button id="search-button">🔍</button>
+      </div>
+      
+      <!-- ! 날짜 정보 박스 -->
+      <div id="weather-box">
+        <div id="weather-details">Weather Details</div>
+        <ul>
+          <li>Max/Min Temp</li>
+          <li id="temp-min-max">-4℃ / -3℃</li>
+        </ul>
+        <ul>
+          <li>Humidity</li>
+          <li id="humidity">29%</li>
+        </ul>
+        <ul>
+          <li id="wind">Wind</li>
+          <li>4.69km/h</li>
+        </ul>
+        <ul>
+          <li>Cloudy</li>
+          <li id="cloudy">1%</li>
+        </ul>
+        <button class="dark">dark</button> 
+      </div> 
+    </div>
+   
+    <!-- # 왼쪽 온도, 지역 표시 -->
+    <div id="left-box">
+      <!-- ! 현재 시간 -->
+      <h3 id="now-date">
+        현재 시간
+      </h3>
+
+      <!-- ! 현재 온도, 지역 -->
+      <div id="now-weather">
+        <h3 id="current-temp">-3℃</h3>
+        <h4 id="city-name">Seoul</h4>
+        <h3 id="weather-icon">🌥</h3>
+      </div>
+    </div>
+  </div> 
+  <script src="./main.js"></script>
+</body>
+</html>
